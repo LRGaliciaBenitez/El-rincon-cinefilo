@@ -52,9 +52,10 @@ inputSearch.addEventListener("keydown", (e) => {
     }
 })
 
-function crearRuedaPorcentaje(porcentaje) {
+function crearRuedaPorcentaje(voteAverage) {
 
-    porcentaje = Math.round(porcentaje * 10);
+    let porcentaje = Math.round((voteAverage|| 0) * 10);
+    let dashArray = `${porcentaje}, 100`;
 
     let color;
     if (porcentaje >= 70) {
@@ -73,7 +74,7 @@ function crearRuedaPorcentaje(porcentaje) {
          a 15.9155 15.9155 0 0 1 0 -31.831"/>
     <path class="circle"
       stroke="${color}"
-      stroke-dasharray="${porcentaje}, 100"
+      stroke-dasharray="${dashArray}"
       d="M18 2.0845
          a 15.9155 15.9155 0 0 1 0 31.831
          a 15.9155 15.9155 0 0 1 0 -31.831"/>
