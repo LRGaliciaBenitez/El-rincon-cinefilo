@@ -460,11 +460,6 @@ main .main__containerPeliculas .main__containerPeliculas--2 .main__containerPeli
   margin: 5px 0 0 0;
   color: #333;
 }
-main .main__containerPeliculas .main__containerPeliculas--2 .main__containerPeliculas--tarjetaPelicula .circular-rating {
-  margin: 0;
-  position: relative;
-  top: -20px;
-}
 main .main__containerTrailers {
   background-color: rgba(2, 47, 109, 0.5647058824);
   width: 100%;
