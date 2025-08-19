@@ -21,8 +21,8 @@ main .main__containerPeliculas .main__containerPeliculas--2 .main__containerPeli
   display: block;
   background-color: rgba(51, 51, 51, 0.4941176471);
   border-radius: 30px;
-  max-width: 50px;
-  max-height: 50px;
+  width: 60px;
+  height: 60px;
 }
 .containerResBusqueda .containerResBusqueda__container .containerResBusqueda__container--peliculas .containerResBusqueda__container--tarjetaPelicula .circular-rating .circular-chart .circle-bg, main .main__containerPeliculas .main__containerPeliculas--2 .main__containerPeliculas--tarjetaPelicula .circular-rating .circular-chart .circle-bg {
   fill: none;

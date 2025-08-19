@@ -20,40 +20,40 @@ $large-pc:1200px;
 
 %circle {
     .circular-rating {
-        margin: 0;
-        position: relative;
-        top: -20px;
-        width: 100%;
-        display: flex;
+      margin: 0;
+      position: relative;
+      top: -20px;
+      width: 100%;
+      display: flex;
 
         .circular-chart {
             display: block;
             background-color: #3333337e;
             border-radius: 30px;
-            max-width: 50px;
-            max-height: 50px;
+            width: 60px;
+            height: 60px;
                         
             .circle-bg {
-                fill: none;
-                stroke: #222;
-                stroke-width: 3.8;
+              fill: none;
+              stroke: #222;
+              stroke-width: 3.8;
             }
 
             .circle {
-                fill: none;
-                stroke-width: 2.8;
-                stroke-linecap: round;
-                transform: rotate(-90deg);
-                transform-origin: center;
-                transition: stroke-dasharray 0.6s ease;
+              fill: none;
+              stroke-width: 2.8;
+              stroke-linecap: round;
+              transform: rotate(-90deg);
+              transform-origin: center;
+              transition: stroke-dasharray 0.6s ease;
             }
 
             .percentage {
-                font-size: 0.7em;
-                fill: white;
-                @extend %bebas-neue-regular;
-                font-weight: bold;
-                text-anchor: middle;
+              font-size: 0.7em;
+              fill: white;
+              @extend %bebas-neue-regular;
+              font-weight: bold;
+              text-anchor: middle;
             }
         }
     }
