@@ -1,0 +1,91 @@
+$fontSizeIcon: clamp(1.4rem, 0.8rem + 1vw, 1.7rem);
+$fontSizeTitles: clamp(1.5rem, 0.8rem + 1vw, 2rem);
+$fontSizeTitlesSmall: clamp(1.5rem, 0.8rem + 1vw, 1.7rem);
+$fontSizeText: clamp(1rem, 0.5rem + 1vw, 1.2rem);
+$tablet: 768px;
+$pc: 1024px;
+$large-pc:1200px;
+
+%bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%circle {
+    .circular-rating {
+        margin: 0;
+        position: relative;
+        top: -20px;
+        width: 100%;
+        display: flex;
+
+        .circular-chart {
+            display: block;
+            background-color: #3333337e;
+            border-radius: 30px;
+            max-width: 50px;
+            max-height: 50px;
+                        
+            .circle-bg {
+                fill: none;
+                stroke: #222;
+                stroke-width: 3.8;
+            }
+
+            .circle {
+                fill: none;
+                stroke-width: 2.8;
+                stroke-linecap: round;
+                transform: rotate(-90deg);
+                transform-origin: center;
+                transition: stroke-dasharray 0.6s ease;
+            }
+
+            .percentage {
+                font-size: 0.7em;
+                fill: white;
+                @extend %bebas-neue-regular;
+                font-weight: bold;
+                text-anchor: middle;
+            }
+        }
+    }
+}
+
+@mixin display-flex ($justify_value, $align_value, $direction_value: row) {
+    display: flex;
+    justify-content: $justify_value;
+    align-items: $align_value;
+    flex-direction: $direction_value;
+}
+
+@mixin display-grid ($grid_template_columns, $grid_template_rows: auto) {
+    display: grid;
+    grid-template-columns: repeat($grid_template_columns, 1fr);
+    grid-template-rows: $grid_template_rows;
+}
+
+@mixin from($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  } @else if $breakpoint == pc {
+    @media (min-width: $pc) {
+      @content;
+    }
+  } @else if $breakpoint == large-pc {
+    @media (min-width: $large-pc) {
+      @content;
+    }
+  } @else {
+    @warn "El breakpoint `#{$breakpoint}` no es válido.";
+  }
+}

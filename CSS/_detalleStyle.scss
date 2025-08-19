@@ -1,0 +1,152 @@
+@use "./base" as *;
+
+header {
+    width: 100%;
+    padding: 0 20px;
+    height: 100px;
+    box-sizing: border-box;
+    background-color: #022e6d;
+    color: black;
+    @include display-flex(space-between, center, row);
+
+    i {
+        font-size: $fontSizeIcon;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+            color: #f0f0f0;
+        }
+    }
+
+    .header__container1 {
+
+        width: 60%;
+        @include display-flex(space-between, center, row);
+        box-sizing: border-box;
+
+        @include from(tablet) {
+            width: 40%;
+            @include display-flex(flex-start, center, row);
+            gap: 40px;
+        }
+
+        i {
+            @include from(tablet) {
+                display: none;
+            }
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .heaader__container1__nav {
+            display: none;
+            box-sizing: border-box;
+
+            @include from(tablet) {
+                display: block;
+            }
+            
+            ul {
+                @include display-flex(space-between, center, row);
+                gap: 20px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    font-size: 1.2rem;
+                    cursor: pointer;
+
+                    a {
+                        @extend %bebas-neue-regular;
+                        text-decoration: none;
+                        color: white;
+
+                        &:hover {
+                        color: #f0f0f0;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .header__container2 {
+        box-sizing: border-box;
+        width: 20%;
+        @include display-flex(center, center, row);
+        gap: 20px;
+    }
+
+}
+
+.menuLateral {
+    box-sizing: border-box;
+    background-color: #022f6d90;
+    width: 300px;
+    min-height: 300px;
+    margin-top: 20px;
+    position: fixed;
+    left: -100%;
+    z-index: 1000;
+    border-radius: 0 10px 10px 0;
+    transition: left 0.3s ease;
+
+    .menuLateral__close {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 10px;
+        @include display-flex(flex-end, center, row);
+
+        i {
+            font-size: $fontSizeIcon;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.2);
+                color: #f0f0f0;
+            }
+        }
+    }
+
+    .menuLateral__container {
+        width: 100%;
+        box-sizing: border-box;
+
+        ul {
+            width: 100%;
+            list-style: none;
+
+            a {
+                color: white;
+                text-decoration: none;
+                @extend %bebas-neue-regular;
+
+                li {
+                    padding: 10px 20px;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #022f6d76;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+.menuLateral.activo {
+    left: 0;
+}
