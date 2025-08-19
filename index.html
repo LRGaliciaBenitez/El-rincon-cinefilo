@@ -16,6 +16,38 @@
         <!-- CSS -->
         <link rel="stylesheet" href="CSS/reset.css">
         <link rel="stylesheet" href="CSS/main.css">
+        <style>
+            body {
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            }
+            .circular-chart {
+            width: 80px;
+            height: 80px;
+            }
+            .circle-bg {
+            fill: none;
+            stroke: #eee;
+            stroke-width: 3.8;
+            }
+            .circle {
+            fill: none;
+            stroke-width: 2.8;
+            stroke: #4caf50;
+            stroke-linecap: round;
+            stroke-dasharray: 75, 100; /* 75% */
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+            }
+            .percentage {
+            font-size: 0.5em;
+            text-anchor: middle;
+            fill: white;
+            }
+        </style>
         <title>Document</title>
     </head>
     <body>
