@@ -52,34 +52,34 @@ inputSearch.addEventListener("keydown", (e) => {
     }
 })
 
-// function crearRuedaPorcentaje(porcentaje) {
+function crearRuedaPorcentaje(porcentaje) {
 
-//     porcentaje = Math.round(porcentaje * 10);
+    porcentaje = Math.round(porcentaje * 10);
 
-//     let color;
-//     if (porcentaje >= 70) {
-//         color = "#21d07a"; // verde
-//     } else if (porcentaje >= 40) {
-//         color = "#d2d531"; // amarillo
-//     } else {
-//         color = "#db2360"; // rojo
-//     }
+    let color;
+    if (porcentaje >= 70) {
+        color = "#21d07a"; // verde
+    } else if (porcentaje >= 40) {
+        color = "#d2d531"; // amarillo
+    } else {
+        color = "#db2360"; // rojo
+    }
 
-//   return `
-//   <svg viewBox="0 0 36 36" class="circular-chart">
-//     <path class="circle-bg"
-//       d="M18 2.0845
-//          a 15.9155 15.9155 0 0 1 0 31.831
-//          a 15.9155 15.9155 0 0 1 0 -31.831"/>
-//     <path class="circle"
-//       stroke="${color}"
-//       stroke-dasharray="${porcentaje}, 100"
-//       d="M18 2.0845
-//          a 15.9155 15.9155 0 0 1 0 31.831
-//          a 15.9155 15.9155 0 0 1 0 -31.831"/>
-//     <text x="18" y="20.35" class="percentage">${porcentaje}%</text>
-//   </svg>`; 
-// }
+  return `
+  <svg viewBox="0 0 36 36" class="circular-chart">
+    <path class="circle-bg"
+      d="M18 2.0845
+         a 15.9155 15.9155 0 0 1 0 31.831
+         a 15.9155 15.9155 0 0 1 0 -31.831"/>
+    <path class="circle"
+      stroke="${color}"
+      stroke-dasharray="${porcentaje}, 100"
+      d="M18 2.0845
+         a 15.9155 15.9155 0 0 1 0 31.831
+         a 15.9155 15.9155 0 0 1 0 -31.831"/>
+    <text x="18" y="20.35" class="percentage">${porcentaje}%</text>
+  </svg>`; 
+}
 
 async function obtenerPeliculas() {
 
@@ -104,16 +104,16 @@ async function obtenerPeliculas() {
             const titulo = document.createElement("h3");
             titulo.textContent = `${pelicula.title}`;
 
-            // const puntaje = document.createElement("div");
-            // puntaje.classList.add("circular-rating");
-            // puntaje.innerHTML = crearRuedaPorcentaje(pelicula.vote_average);
+            const puntaje = document.createElement("div");
+            puntaje.classList.add("circular-rating");
+            puntaje.innerHTML = crearRuedaPorcentaje(pelicula.vote_average);
 
             const fecha = document.createElement("p");
             fecha.id = "fecha_estreno";
             fecha.textContent = `Fecha estreno: ${pelicula.release_date}`;
 
             tarjeta.appendChild(img);
-            // tarjeta.appendChild(puntaje);
+            tarjeta.appendChild(puntaje);
             tarjeta.appendChild(titulo);
             tarjeta.appendChild(fecha);
 
@@ -219,12 +219,12 @@ async function obtenerBusqueda() {
             const title = document.createElement("h3");
             title.textContent = pelicula.title || pelicula.name || "Sin título";;
 
-            // const porcentaje = document.createElement("div");
-            // porcentaje.classList.add("circular-rating");
-            // porcentaje.innerHTML = crearRuedaPorcentaje(pelicula.vote_average);
+            const porcentaje = document.createElement("div");
+            porcentaje.classList.add("circular-rating");
+            porcentaje.innerHTML = crearRuedaPorcentaje(pelicula.vote_average);
 
             tarjeta.appendChild(img);
-            // tarjeta.appendChild(porcentaje);
+            tarjeta.appendChild(porcentaje);
             tarjeta.appendChild(title);
 
             divAddPeliculas.appendChild(tarjeta);

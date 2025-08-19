@@ -263,7 +263,7 @@ header {
                     text-align: center;
                 }
 
-                // @extend %circle;
+                @extend %circle;
             }
         }
     }
@@ -423,7 +423,7 @@ main {
                     color: #333;
                 }
 
-                // @extend %circle;
+                @extend %circle;
             }
         }
     }

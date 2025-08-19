@@ -1,4 +1,4 @@
-header .header__container1 .heaader__container1__nav ul li a, .menuLateral .menuLateral__container ul a, .containerResBusqueda .containerResBusqueda__container h2, .containerResBusqueda .containerResBusqueda__container .containerResBusqueda__container--peliculas .containerResBusqueda__container--tarjetaPelicula h3, main .main__containerPeliculas h2, main .main__containerPeliculas .main__containerPeliculas--2 .main__containerPeliculas--tarjetaPelicula h3, main .main__containerTrailers .main__containerTrailers--1 h2, main .main__containerTrailers .main__containerTrailers--1 .main__containerTrailers--2 .containerTarjetaVideo .descripcionTrailer h3 {
+header .header__container1 .heaader__container1__nav ul li a, .menuLateral .menuLateral__container ul a, .containerResBusqueda .containerResBusqueda__container h2, .containerResBusqueda .containerResBusqueda__container .containerResBusqueda__container--peliculas .containerResBusqueda__container--tarjetaPelicula h3, main .main__containerPeliculas h2, main .main__containerPeliculas .main__containerPeliculas--2 .main__containerPeliculas--tarjetaPelicula h3, main .main__containerTrailers .main__containerTrailers--1 h2, main .main__containerTrailers .main__containerTrailers--1 .main__containerTrailers--2 .containerTarjetaVideo .descripcionTrailer h3, .containerResBusqueda .containerResBusqueda__container .containerResBusqueda__container--peliculas .containerResBusqueda__container--tarjetaPelicula .circular-rating .circular-chart .percentage, main .main__containerPeliculas .main__containerPeliculas--2 .main__containerPeliculas--tarjetaPelicula .circular-rating .circular-chart .percentage {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -8,6 +8,40 @@ main .main__containerPeliculas .main__containerPeliculas--2 .main__containerPeli
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.containerResBusqueda .containerResBusqueda__container .containerResBusqueda__container--peliculas .containerResBusqueda__container--tarjetaPelicula .circular-rating, main .main__containerPeliculas .main__containerPeliculas--2 .main__containerPeliculas--tarjetaPelicula .circular-rating {
+  margin: 0;
+  position: relative;
+  top: -20px;
+  width: 100%;
+  display: flex;
+}
+.containerResBusqueda .containerResBusqueda__container .containerResBusqueda__container--peliculas .containerResBusqueda__container--tarjetaPelicula .circular-rating .circular-chart, main .main__containerPeliculas .main__containerPeliculas--2 .main__containerPeliculas--tarjetaPelicula .circular-rating .circular-chart {
+  display: block;
+  background-color: rgba(51, 51, 51, 0.4941176471);
+  border-radius: 30px;
+  max-width: 50px;
+  max-height: 50px;
+}
+.containerResBusqueda .containerResBusqueda__container .containerResBusqueda__container--peliculas .containerResBusqueda__container--tarjetaPelicula .circular-rating .circular-chart .circle-bg, main .main__containerPeliculas .main__containerPeliculas--2 .main__containerPeliculas--tarjetaPelicula .circular-rating .circular-chart .circle-bg {
+  fill: none;
+  stroke: #222;
+  stroke-width: 3.8;
+}
+.containerResBusqueda .containerResBusqueda__container .containerResBusqueda__container--peliculas .containerResBusqueda__container--tarjetaPelicula .circular-rating .circular-chart .circle, main .main__containerPeliculas .main__containerPeliculas--2 .main__containerPeliculas--tarjetaPelicula .circular-rating .circular-chart .circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dasharray 0.6s ease;
+}
+.containerResBusqueda .containerResBusqueda__container .containerResBusqueda__container--peliculas .containerResBusqueda__container--tarjetaPelicula .circular-rating .circular-chart .percentage, main .main__containerPeliculas .main__containerPeliculas--2 .main__containerPeliculas--tarjetaPelicula .circular-rating .circular-chart .percentage {
+  font-size: 0.7em;
+  fill: white;
+  font-weight: bold;
+  text-anchor: middle;
 }
 
 header {
