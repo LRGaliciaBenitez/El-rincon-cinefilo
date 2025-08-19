@@ -30,7 +30,8 @@ $large-pc:1200px;
             display: block;
             background-color: #3333337e;
             border-radius: 30px;
-            width: 60px;
+            width: 100%;
+            max-width: 60px;
             height: 60px;
                         
             .circle-bg {
