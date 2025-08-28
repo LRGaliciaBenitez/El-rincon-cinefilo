@@ -150,3 +150,234 @@ header {
 .menuLateral.activo {
     left: 0;
 }
+
+.main {
+
+    .main__containerPosterPelicula {
+        width: 100%;
+        max-height: 250px;
+        box-sizing: border-box;
+
+        @include from(tablet) {
+            max-height: 300px;
+        }
+
+        img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+
+
+            @include from(tablet) {
+                max-height: 300px;
+            }
+        }
+    }
+
+    .main__containerInfoPelicula {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        @include display-flex(center, center, column);
+
+        @include from(tablet) {
+            @include display-flex(center, center, row);
+            padding: 20px 20px;
+        }
+
+        .main__containerInfoPelicula--imagen-title {
+            width: 100%;
+            box-sizing: border-box;
+            @include display-flex(center, center, column);
+            position: relative;
+            top: -50px;
+
+            @include from(tablet) {
+                width: 30%;
+                position: relative;
+                top: 0;
+            }
+
+            img {
+                width: 200px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 10px;
+                box-sizing: border-box;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.537);
+            }
+
+            .tit_clasif_punt {
+                width: 100%;
+                box-sizing: border-box;
+                margin-top: 10px;
+
+                h2 {
+                    text-align: center;
+                    color: #022e6d;
+                    @extend %bebas-neue-regular;
+                    font-size: $fontSizeTitles;
+                }
+
+                div {
+                    width: 100%;
+                    @include display-flex(center, center, column);
+                    gap: 10px;
+                    
+                    p {
+                        @extend %roboto-regular;
+                        font-size: $fontSizeText;
+                    }
+                }
+
+                @extend %circle;
+
+                .circular-rating {
+                    margin-top: 15px;
+                    top: 0;
+                }
+            }
+        }
+
+        .main__containerInfoPelicula--descripcion {
+            width: 100%;
+            box-sizing: border-box;
+            padding-bottom: 20px;
+            @include display-flex(center, center, column);
+
+            @include from(tablet) {
+                width: 70%;
+                height: 100%;
+                padding: 0 20px;
+                box-sizing: border-box;
+            }
+
+            .resumen-pelicula {
+                width: 100%;
+                box-sizing: border-box;
+
+                h3 {
+                    @extend %bebas-neue-regular;
+                    font-size: $fontSizeTitles;
+                    color: #022e6d;
+                }
+
+                p {
+                    @extend %roboto-regular;
+                    font-size: $fontSizeText;
+                    margin-top: 10px;
+                    text-align: justify;
+                    line-height: 1.2;
+                }
+            }
+
+            .container-infoMas {
+                width: 100%;
+                box-sizing: border-box;
+                margin-top: 15px;
+                @include display-flex(flex-start, center, row);
+                gap: 30px;
+
+                .contInf {
+                    box-sizing: border-box;
+
+                    h3 {
+                        @extend %bebas-neue-regular;
+                        font-size: $fontSizeText;
+                        color: #022e6d;
+                    }
+
+                    p {
+                        @extend %roboto-regular;
+                        font-size: $fontSizeText;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .main__containerInfoActores {
+        width: 100%;
+        padding: 0 20px 20px 20px;
+        box-sizing: border-box;
+
+        h2 {
+            @extend %bebas-neue-regular;
+            font-size: $fontSizeTitles;
+            color: #022e6d;
+            margin-bottom: 10px;
+        }
+
+        .main__containerInfoActores--container {
+            width: 100%;
+            box-sizing: border-box;
+            overflow-x: auto;
+            overflow-y: hidden;
+            @include display-flex(flex-start, center, row);
+            gap: 20px;
+            padding-bottom: 10px;
+
+            &::-webkit-scrollbar {
+                height: 8px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #022e6d;
+                border-radius: 4px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: #f0f0f0;
+                border-radius: 4px;
+            }
+
+            .actor {
+                width: 150px;
+                min-height: 250px;
+                box-sizing: border-box;
+                flex: 0 0 auto;
+                @include display-flex(center, center, column);
+                cursor: pointer;
+                transition: transform 0.3s ease-in-out;
+
+                @include from(tablet) {
+                    width: 200px;
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                img {
+                    width: 100%;
+                    height: 150px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 15px;
+
+                    @include from(tablet) {
+                        height: 200px;
+                    }
+                }
+
+                h3 {
+                    @extend %roboto-regular;
+                    font-size: $fontSizeText;
+                    text-align: center;
+                    margin-top: 5px;
+                }
+
+                p {
+                    @extend %roboto-regular;
+                    font-size: 0.9rem;
+                    text-align: center;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+    }
+}
