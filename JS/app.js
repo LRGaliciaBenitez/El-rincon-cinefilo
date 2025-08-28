@@ -118,6 +118,10 @@ async function obtenerPeliculas() {
             tarjeta.appendChild(titulo);
             tarjeta.appendChild(fecha);
 
+            tarjeta.addEventListener("click", () => {
+                window.location.href = `detalle.html?id=${pelicula.id}`;
+            })
+
             containerPeliculas.appendChild(tarjeta);
             
         });
@@ -227,6 +231,10 @@ async function obtenerBusqueda() {
             tarjeta.appendChild(img);
             tarjeta.appendChild(porcentaje);
             tarjeta.appendChild(title);
+
+            tarjeta.addEventListener("click", () => {
+                window.location.href = `detalle.html?id=${pelicula.id}`;
+            })
 
             divAddPeliculas.appendChild(tarjeta);
         })
