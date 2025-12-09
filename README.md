@@ -39,6 +39,7 @@ Diseñada para amantes del cine que desean descubrir nuevas películas y obtener
 /IMG
 
 index.html
+
 detalle.html
 
 ---
