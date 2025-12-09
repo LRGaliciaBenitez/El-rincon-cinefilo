@@ -28,11 +28,16 @@ Diseñada para amantes del cine que desean descubrir nuevas películas y obtener
 ## 📁 Estructura del proyecto
 
 /CSS
+
     ├── estilos.css
+    
 /JS
+
     ├── app.js
     ├── detalle.js
+    
 /IMG
+
 index.html
 detalle.html
 
