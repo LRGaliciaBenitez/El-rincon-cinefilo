@@ -27,20 +27,51 @@ Diseñada para amantes del cine que desean descubrir nuevas películas y obtener
 
 ## 📁 Estructura del proyecto
 
-/CSS
+📦CSS
 
-    ├── estilos.css
-    
-/JS
+ ┣ 📜detalle.css
+ 
+ ┣ 📜detalle.css.map
+ 
+ ┣ 📜detalle.scss
+ 
+ ┣ 📜main.css
+ 
+ ┣ 📜main.css.map
+ 
+ ┣ 📜main.scss
+ 
+ ┣ 📜reset.css
+ 
+ ┣ 📜_base.scss
+ 
+ ┣ 📜_detalleStyle.scss
+ 
+ ┗ 📜_style.scss
+ 
+ 📦IMG
+ 
+ ┣ 📂posters
+ 
+ ┃ ┗ 📜poster_spiderMan.jpg
+ 
+ ┣ 📜imagen_respaldo.png
+ 
+ ┣ 📜logo_pag_peliculas.png
+ 
+ ┣ 📜poster_peliculas_background.png
+ 
+ ┗ 📜Tom_Holland.jpg
 
-    ├── app.js
-    ├── detalle.js
-    
-/IMG
+ 📦JS
+ 
+ ┣ 📜app.js
+ 
+ ┗ 📜detalle.js
 
-index.html
+ 📜detalle.html
 
-detalle.html
+ 📜index.html
 
 ---
 
@@ -70,8 +101,8 @@ detalle.html
 
 ## 📄 Licencia & Créditos
 
-Este proyecto es — uso libre.
+Este proyecto es de uso libre.
 
-Creado por [Luis Galicia].
+Creado por Luis Galicia.
 Si quieres verlo funcionando o tienes sugerencias, puedes contactarme / hacer fork / pull-requests.
 
