@@ -81,7 +81,9 @@ Diseñada para amantes del cine que desean descubrir nuevas películas y obtener
 - 🎞️ **Listado de resultados** con poster, año y puntuación.  
 - 📘 **Página de detalles**: sinopsis, calificación, fecha de estreno, imagen, etc.  
 - 📱 **Diseño responsivo**.  
-- ⚡ Código ligero en JavaScript, sin frameworks.
+- ⚡ **Código ligero en JavaScript, sin frameworks**.
+- **Vista de tarilers sobre peliculas y series nuevas**.
+- **Sección de series y peliculas en tendencia con calificación**.
 
 ---
 
@@ -94,8 +96,6 @@ Diseñada para amantes del cine que desean descubrir nuevas películas y obtener
 -Agregar un diseño más pulido / animaciones / transiciones.
 
 -Permitir favoritos — que el usuario marque películas preferidas.
-
--Añadir manejo de errores (por ejemplo, si la API falla o no hay resultados).
 
 ---
 
